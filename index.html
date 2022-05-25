@@ -1,90 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alison Song Homepage</title>
-</head>
+    <head>
+    <title>Yewon's A-frame</title>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    </head>
 
-<body>
-    <div>
-        <h1>Alison Song Homepage</h1>
-        <p>Welcome :)</p>
-          <nav id="nav">
-            <ul type="square">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#Tori's Photos">Tori's photos</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id="trash" src="trash.jpg">
+                <audio id="garage" src="12.mp3"></audio>
+            </a-assets>
 
-          <style type="text/css">
-    	body{
-    		background-color: #FFE2DE;
-    		color: #01356B;
-    		font-family: "Comic Sans MS", cursive, sans-serif;
-    	}
-          </style>
+            <a-entity position="0 0 7">
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+            </a-entity>
 
-  <header id="home">
-    <h1>Alison MEDP 331 HOMEPAGE</h1>
+            <a-plane src="#trash" scale="40 40 1" repeat="2 2" rotation="-90 0 0">
+            </a-plane>
 
-      <p>Hello, I am Yewon Song who taking  MEDP 331 class. My prefer name is Alison.</p>
-      <p>Through this class, I hope to learn "html" that I learned in the previous semester in more depth.</p>
-      <p>And I hope understand web production better than last semester. </p>
-      <p>Web production is funs, but sometimes it is difficult to understand.</p>
-      <p>However, I want to create a homepage that shows my personality well, not just about creating a homepage.</p>
-  </header>
+            <a-cylinder color="#0088FF" height="5" position="-2 2.5 0"
+                        sound="src #garage;
+                        on: click">
+            </a-cylinder>
 
-  <hr />
-
-  <section id="Tori's photos">
-    <h1>Tori's photos</h1>
-      <ol>
-        <li>Tori's photos - <a href="slideshow.html">Slideshow</a></li>
-      </ol>
-
-    </div>
-
-    <section id="Tori's photos">
-      <h1>Project1</h1>
-        <ol>
-          <li>Project1 - <a href="Week 2/starter-code/week1.html">Project1</a></li>
-        </ol>
-
-      </div>
-
-    <section id="Tori's photos">
-        <h1>Project2</h1>
-          <ol>
-            <li>Project2 - <a href="Week 3/assignment-starter-code/week2.html">Project2</a></li>
-          </ol>
-
-        </div>
-
-        <section id="Tori's photos">
-            <h1>Project3</h1>
-              <ol>
-                <li>Project3 - <a href="Week 4/week4.html">Project3</a></li>
-              </ol>
-
-            </div>
-
-    <hr />
-
-     <p>I'll put up my Instagram link here. If you want to come and watch, it's okay to watch!</P>
-     <p><a href="https://www.instagram.com/alison_ywon/">Instagram</a></p>
-
-    <hr />
-
- <footer id="contact">
-  <h1>Contact</h1>
-  <p>
-  <a href="0326angel96@gmail.com">My Email</a>
-  <br />
-  <a href="#nav">top</a>
-  </p>
- </footer>
-
-</body>
+            <a-box id="yellow" color="#FFAA00" position="1.5 0.5 0.5">
+                <a-sphere color="00AA00" radius="0.25" position="-0.5 1 0"></a-sphere>
+                <a-sphere color="AA0000" radius="0.25" position="0.5 1 0"></a-sphere>
+            </a-box>
+        </a-scene>
+    </body>
 </html>
